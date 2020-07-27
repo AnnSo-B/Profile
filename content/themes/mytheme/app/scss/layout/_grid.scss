@@ -1,0 +1,17 @@
+.grid {
+  width: 80%;
+  margin: 2em auto;
+  color: $color-text-alt;
+  background-color: lighten($color-bg-alt, 95);
+  border: 1px lighten($color-bg-alt, 25);
+  border-radius: 8px;
+
+  @media screen AND (min-width: $breakpoint-large) {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 50%;
+    }
+  }
+}
