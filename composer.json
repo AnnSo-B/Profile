@@ -1,0 +1,29 @@
+{
+    "name": "annso/wordpress-custom",
+    "authors": [
+        {
+            "name": "Annso",
+            "email": "annso@mail.fr"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "*",
+        "wpackagist-theme/twentytwenty": "*",
+        "wpackagist-plugin/akismet": "*",
+        "wpackagist-plugin/what-the-file": "*",
+        "wpackagist-plugin/simply-show-hooks": "*"
+    },
+    "extra" : {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "content/themes/{$name}": ["type:wordpress-theme"],
+            "content/plugins/{$name}": ["type:wordpress-plugin"]
+        }
+    }
+}
