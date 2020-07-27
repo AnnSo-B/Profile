@@ -1,0 +1,23 @@
+.posts {
+
+  @media screen AND (min-width: $breakpoint-large) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .post {
+
+    @media screen AND (min-width: $breakpoint-large) {
+      width: 50%;
+    }
+
+    @media screen AND (min-width: $breakpoint-xl) {
+      width: 45%;
+
+      &:nth-child(4n-1),
+      &:nth-child(4n-2) {
+        width: 55%
+      }
+    }
+  }
+}
