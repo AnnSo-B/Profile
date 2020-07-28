@@ -1,0 +1,68 @@
+.post {
+  position: relative;
+  padding: 2em 1.5em;
+  font-weight: bold;
+  // https://developer.mozilla.org/fr/docs/Web/CSS/text-shadow
+  text-shadow: 1px 1px 2px $black ;
+  // https://developer.mozilla.org/fr/docs/Web/CSS/background-position
+  background-position: center;
+  // https://developer.mozilla.org/fr/docs/Web/CSS/background-size
+  background-size: cover;
+  // https://developer.mozilla.org/fr/docs/Web/CSS/background-repeat
+  background-repeat: no-repeat;
+  z-index: 1;
+
+
+  @media screen AND (min-width: $breakpoint-large) {
+    padding: 3em 2em;
+  }
+
+  @media screen AND (min-width: $breakpoint-xl) {
+    padding: 4em;
+  }
+
+  &__title {
+    font-family: $font-family-title, $font-family-fallback;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    padding-bottom: 0.2em;
+    border-bottom: 3px solid $color-text;
+    margin-bottom: 1.5em;
+  }
+
+  p {
+    line-height: 1.2em;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color;
+    opacity: 0.7;
+    z-index: -1;
+    transition: $duration-medium;
+  }
+
+  // https://sass-lang.com/documentation/at-rules/control/each
+  // https://sass-lang.com/documentation/at-rules/control/each#with-maps
+  // for each item included in $posts-filter-colors
+  // we need the index and the associated color
+  @each $index, $filter-color in $posts-filter-colors {
+    // .post:nth-child
+    // concatenation : #{$variable}
+    // 6n --> every 6th element
+    // last child = 1 so 1 + index = current child
+    &:nth-child(6n + #{$index})::after {
+      background-color: $filter-color;  
+    }
+  }
+
+  &:hover::after {
+    opacity: 0.3;
+    background-color: $color-bg-alt;
+  }
+}
