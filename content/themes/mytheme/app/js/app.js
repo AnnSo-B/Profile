@@ -16,6 +16,11 @@ const app = {
      * Smooth scroll
      */
     app.initSmoothScroll();
+
+    /*
+     * Init method to toggle the menu
+     */
+    app.initToggleMenu();
   },
 
   /**
@@ -75,6 +80,27 @@ const app = {
       );
     }
   },
+
+  /**
+   * Menu methods
+   */
+  initToggleMenu: () => {
+    const menuButtons = document.querySelectorAll('.button');
+    // console.log(menuButtons);
+
+    menuButtons.forEach(button => {
+      button.addEventListener('click', app.toggleMenu);
+    });
+  },
+
+  toggleMenu: (event) => {
+    // console.log(event.currentTarget);
+    event.preventDefault();
+
+    const bodyElement = document.querySelector('body');
+    // console.log(bodyElement);
+    bodyElement.classList.toggle('menu--visible');
+  }
 
 };
 
