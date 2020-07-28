@@ -5,6 +5,16 @@
 html,
 body {
   color: $color-text;
+  font-size: $font-size;
+  font-family: $font-family-content, $font-family-fallback;
+
+  @media screen AND (min-width: $breakpoint-medium) {
+    font-size: $font-size-medium;
+  }
+
+  @media screen AND (min-width: $breakpoint-large) {
+    font-size: $font-size-large;
+  }
 }
 
 body {
