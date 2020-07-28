@@ -1,0 +1,19 @@
+.action-link {
+  color: $color;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5em;
+  border: 2px solid $color;
+  transition: all $duration-medium;
+
+  &:hover {
+    color: $color-alt;
+    border-color: $color-alt;
+  }
+
+  &::after {
+    content: '\f178';
+    font-family: 'FontAwesome';
+    padding-left: 1em;
+  }
+}

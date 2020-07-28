@@ -1,0 +1,21 @@
+.button {
+  color: $color-text;
+  font-size: $font-size-medium;
+  background: none;
+  border: none;
+
+  &.close-menu{
+    position: absolute;
+    top: 20px;
+    right: 16px;
+
+    @media screen AND (min-width: $breakpoint-medium) {
+      top: 30px;
+      right: 20px;
+    }
+  
+    @media screen AND (min-width: $breakpoint-large) {
+      top: 38px;
+    }
+  }
+}
