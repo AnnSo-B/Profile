@@ -1,0 +1,16 @@
+.footer {
+  background-color: $color-bg-footer;
+  padding: 1em;
+
+  @media screen AND (min-width: $breakpoint-medium) {
+    display: flex;
+  
+    .contact-form {
+      width: 60%;
+    }
+  
+    .contact-info {
+      width: 40%;
+    }
+  }
+}
