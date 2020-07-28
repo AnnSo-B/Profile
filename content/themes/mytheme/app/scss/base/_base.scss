@@ -7,6 +7,21 @@ body {
   color: $color-text;
 }
 
+body {
+
+  &.menu--visible {
+    
+    .wrapper {
+      // https://developer.mozilla.org/fr/docs/Web/CSS/filter
+      filter: blur(5px);
+    }
+
+    .menu {
+      visibility: visible;
+    }
+  }
+}
+
 a {
   text-decoration: none;
   color: $color-text;
