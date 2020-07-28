@@ -9,7 +9,6 @@
   background-repeat: no-repeat;
   // https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
   z-index: 1;
-  padding: 1em;
 
   @media screen AND (min-width: $breakpoint-medium) {
     // https://developer.mozilla.org/fr/docs/Web/CSS/background-position
@@ -39,10 +38,22 @@
   }
 
   &__menu {
-    z-index: 2;
-    // https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
+    padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
+    z-index: 2;
+
+    &.fixed {
+      position: fixed;
+      width: 100%;
+      // https://developer.mozilla.org/fr/docs/Web/CSS/linear-gradient
+      background: linear-gradient(
+        to right,
+        $color,
+        $color-alt
+      );
+    }
   }
 }
