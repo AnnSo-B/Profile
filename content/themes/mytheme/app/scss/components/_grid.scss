@@ -1,0 +1,66 @@
+.grid {
+  color: $color-text-alt;
+  background-color: lighten($color-bg-alt, 95%);
+  border: 1px solid lighten($color-bg-alt, 75%);
+  border-radius: 10px;
+
+  &__item {
+    position: relative;
+    border-bottom: 1px solid lighten($color-bg-alt, 75%);
+    padding: 2em;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 1em;
+      right: 2em;
+      width: 2em;
+      height: 2em;
+      text-align: center;
+      line-height: 2em;
+      color: $color-text;
+      background-color: $color;
+      border-radius: 5px;
+    }
+
+    &__title {
+      font-size: 1.1em; 
+      font-family: $font-family-title, $font-family-fallback;
+      font-weight: bold;
+      margin-bottom: 1.5em;
+    }
+
+    &__content {
+      font-size: 0.9em;      
+    }
+
+    @media screen AND (min-width: $breakpoint-large) {
+      
+      // even child
+      &:nth-child(even) {
+        border-left: 1px solid lighten($color-bg-alt, 75%);
+      }
+  
+      // https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-last-child
+      &:nth-last-child(-n+2) {
+        border-bottom: none;
+      }
+  
+      &__icon {
+        right: unset;
+        left: 2em;
+      }
+  
+      &__title {
+        margin-left: 3em;
+      }
+  
+      &__content {
+        margin-left: 3em;
+      }
+    }
+  }
+}
