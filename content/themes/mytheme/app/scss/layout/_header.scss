@@ -43,8 +43,7 @@
     justify-content: space-between;
     align-items: center;
     // https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
-    z-index: 10;
-    // TODO - fix menu on posts section !!!
+    z-index: 3;
 
     &.fixed {
       position: fixed;
