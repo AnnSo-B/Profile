@@ -1,0 +1,42 @@
+.field {
+  width: 90%;
+  margin: 0 auto;
+
+  &__label {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 0.4em;
+    margin-top: 0.8em;
+  }
+
+  input[type=text],
+  input[type=email],
+  textarea {
+    width: 100%;
+    padding: 0.5em;
+    color: $color-text;
+    background-color: lighten($color-bg-footer, 10);
+    border: none;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  textarea {
+    height: 9em;
+    resize: none;
+  }
+}
+
+@media screen AND (min-width: $breakpoint-medium) {
+  
+  .user-info {
+    display: flex;
+
+    .field {
+      width: 40%;
+    }
+  }
+}

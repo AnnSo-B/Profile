@@ -1,0 +1,38 @@
+.contact-info {
+
+  &__item {
+    position: relative;
+    border-bottom: 1px solid lighten($color-bg-footer, 10);
+    padding: 1em;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &__icon {
+      position: absolute;
+      color: lighten($color-bg-footer, 50);
+    }
+
+  
+    &__title {
+      font-family: $font-family-title, $font-family-fallback;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-left: 2rem;
+      margin-bottom: 1em;
+    }
+
+    &__value {
+      margin-left: 2rem;
+    }
+  }
+
+  @media screen AND (min-width: $breakpoint-medium) {
+    border-left: 1px solid lighten($color-bg-footer, 10);
+
+    &__item {
+      margin: 0 1em;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.banner {
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+
+  @media screen AND (min-width: $breakpoint-medium) {
+    width: 75%;
+  }
+
+  @media screen AND (min-width: $breakpoint-large) {
+    padding-left: 3em
+  }
+
+  @media screen AND (min-width: $breakpoint-xl) {
+    width: 50%;
+    padding-left: 5em
+  }
+}

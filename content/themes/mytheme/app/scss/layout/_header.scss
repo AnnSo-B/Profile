@@ -1,0 +1,59 @@
+.header {
+  min-height: 60vh;
+  position: relative;
+  // https://developer.mozilla.org/fr/docs/Web/CSS/background-position
+  background-position: right;
+  // https://developer.mozilla.org/fr/docs/Web/CSS/background-size
+  background-size: cover;
+  // https://developer.mozilla.org/fr/docs/Web/CSS/background-repeat
+  background-repeat: no-repeat;
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
+  z-index: 2;
+
+  @media screen AND (min-width: $breakpoint-medium) {
+    // https://developer.mozilla.org/fr/docs/Web/CSS/background-position
+    background-position-y: center;
+  }
+
+  @media screen AND (min-width: $breakpoint-xl) {
+    // https://developer.mozilla.org/fr/docs/Web/CSS/background-position
+    background-position: top;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    // https://developer.mozilla.org/fr/docs/Web/CSS/linear-gradient
+    background: linear-gradient(
+      to right,
+      transparentize($color-bg-alt, 0),
+      transparentize($color-bg-alt, 1)
+    );
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
+    z-index: -1;
+  }
+
+  &__menu {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
+    z-index: 3;
+
+    &.fixed {
+      position: fixed;
+      width: 100%;
+      // https://developer.mozilla.org/fr/docs/Web/CSS/linear-gradient
+      background: linear-gradient(
+        to right,
+        $color,
+        $color-alt
+      );
+    }
+  }
+}

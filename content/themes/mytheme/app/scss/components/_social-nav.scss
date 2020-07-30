@@ -1,0 +1,12 @@
+.social-nav {
+  display: flex;
+  justify-content: space-evenly;
+
+  &__item {
+    margin: 0.5em;
+
+    @media screen AND (min-width: $breakpoint-medium) {
+      margin: 1em;
+    }
+  }
+}

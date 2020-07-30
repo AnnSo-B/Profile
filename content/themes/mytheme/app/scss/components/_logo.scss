@@ -1,0 +1,9 @@
+.logo {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+
+  @media screen AND (min-width: $breakpoint-medium) {
+    letter-spacing: 1px;
+  }
+}

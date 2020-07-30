@@ -1,0 +1,12 @@
+.contact-form {
+
+  &__button {
+    color: $color-text-alt;
+    background-color: $color-bg;
+    font-weight: bold;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    margin-left: 2em;
+    border: none;
+  }
+}

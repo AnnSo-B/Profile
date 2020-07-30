@@ -1,0 +1,13 @@
+.grid {
+  width: 80%;
+  margin: 2em auto;
+
+  @media screen AND (min-width: $breakpoint-large) {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 50%;
+    }
+  }
+}
