@@ -30,6 +30,27 @@ if (!function_exists('mytheme_scripts')) {
     'mytheme_scripts'
   );
 
+  // my custom theme setup
+  if (!function_exists('mytheme_setup')) {
+    function mytheme_setup() {
+      // https://developer.wordpress.org/reference/functions/add_theme_support/
+      // define the title tag in head
+      // https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
+      add_theme_support( 'title-tag' );
+  
+      // define new entry in article BO
+      // thumbnails image
+      // https://developer.wordpress.org/reference/functions/add_theme_support/#post-thumbnails
+      add_theme_support( 'post-thumbnails' );      
+    };
+  };
+
+  // add custom function to hook
+  add_action(
+    // https://developer.wordpress.org/reference/hooks/after_setup_theme/
+    'after_setup_theme',
+    'mytheme_setup'
+  );
 }
 
 ?>
