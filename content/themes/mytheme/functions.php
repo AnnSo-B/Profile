@@ -41,7 +41,15 @@ if (!function_exists('mytheme_scripts')) {
       // define new entry in article BO
       // thumbnails image
       // https://developer.wordpress.org/reference/functions/add_theme_support/#post-thumbnails
-      add_theme_support( 'post-thumbnails' );      
+      add_theme_support( 'post-thumbnails' );  
+
+      // define the navigation menu position names
+      // https://developer.wordpress.org/reference/functions/register_nav_menus/   
+      // array as param 
+      register_nav_menus([
+        // name => description
+        'action-links' => 'liens bannière'
+      ]);      
     };
   };
 
