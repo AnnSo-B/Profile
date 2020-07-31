@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-  <meta charset="UTF-8">
+  <meta <?php bloginfo('charset'); ?>>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
 </head>
@@ -10,7 +10,7 @@
   <?php get_template_part('template-parts/header/menu'); ?>
 
   <div class="wrapper">
-    <header id="header" class="header" style="background-image: url('../images/see.jpg');">
+    <header id="header" class="header" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
       <?php get_template_part('template-parts/header/header-menu'); ?>
       <?php get_template_part('template-parts/header/banner'); ?>
     </header>
