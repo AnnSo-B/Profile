@@ -21,6 +21,11 @@ const app = {
      * Init method to toggle the menu
      */
     app.initToggleMenu();
+
+    /**
+     * Close menu on click on links
+     */
+    app.initCloseMenu();
   },
 
   /**
@@ -97,11 +102,26 @@ const app = {
     // console.log(event.currentTarget);
     event.preventDefault();
 
-    const bodyElement = document.querySelector('body');
+    app.bodyElement = document.querySelector('body');
     // console.log(bodyElement);
-    bodyElement.classList.toggle('menu--visible');
-  }
+    app.bodyElement.classList.toggle('menu--visible');
+  },
 
+  /**
+   * Methods to close menu
+   */
+  initCloseMenu: () => {
+    // on internal links only
+    const links = document.querySelectorAll('.main-nav__item');
+
+    links.forEach(link => {
+      link.addEventListener('click', app.closeMenu); 
+    });
+  },
+
+  closeMenu: () => {
+    app.bodyElement.classList.remove('menu--visible');
+  },
 };
 
 document.addEventListener('DOMContentLoaded', app.init);
