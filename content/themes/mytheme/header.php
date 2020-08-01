@@ -10,7 +10,13 @@
   <?php get_template_part('template-parts/header/menu'); ?>
 
   <div class="wrapper">
-    <header id="header" class="header" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+    <header
+      id="header"
+      class="header"
+      <?php if (the_post_thumbnail_url() !== '') : ?>
+        style="background-image: url('<?php the_post_thumbnail_url(); ?>');"
+      <?php endif; ?>
+    >
       <?php get_template_part('template-parts/header/header-menu'); ?>
       <?php 
         // settings --> reading --> home page = static and home = "Hello je suis..." page and articles page = "Article" page 

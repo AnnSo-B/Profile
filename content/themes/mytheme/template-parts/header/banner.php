@@ -5,10 +5,6 @@
           </h1>
           <?php the_content(); ?>
         </div>
-        <!-- <div class="action-links">
-          <a href="#grid" class="action-link">En savoir plus</a>
-          <a href="#footer" class="action-link">Contact</a>
-        </div> -->
         <?php 
           // the menu is set in appearances / menu
           // this is the main menu attached from the backoffice to the action-links slot
