@@ -49,7 +49,8 @@ if (!function_exists('mytheme_scripts')) {
       register_nav_menus([
         // name => description
         'action-links'  => 'liens bannière',
-        'main-nav'     => 'menu principal'
+        'main-nav'      => 'menu principal',
+        'social-nav'    => 'réseaux sociaux'
       ]);      
     };
   };
