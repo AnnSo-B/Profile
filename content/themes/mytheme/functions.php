@@ -48,7 +48,8 @@ if (!function_exists('mytheme_scripts')) {
       // array as param 
       register_nav_menus([
         // name => description
-        'action-links' => 'liens bannière'
+        'action-links'  => 'liens bannière',
+        'main-nav'     => 'menu principal'
       ]);      
     };
   };

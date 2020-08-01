@@ -15,8 +15,10 @@
           // https://developer.wordpress.org/reference/functions/wp_nav_menu/
           $actionLinks = wp_nav_menu([
             'theme-location'  => 'action-links',
-            'container'       => '',
-            'container_class' => '',
+            // 'menu'            => 3,
+            'fallback_cb'     => false,
+            'container'       => '', // no container
+            'container_class' => '', // so no class
             'menu_class'      => 'action-links', // ul element css class
             'echo' => false
           ]);
