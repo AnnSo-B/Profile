@@ -33,6 +33,9 @@
   </div>
   [submit class=contact-form__button "Envoyer"]
 -->
+<!-- issues with the class on submit button 
+  https://contactform7.com/submit-button/ 
+-->
 <!-- and it's displayed this way thanks to the shortcode -->
 <div class="contact-form">
   <?php
