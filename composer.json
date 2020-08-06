@@ -17,7 +17,9 @@
         "wpackagist-theme/twentytwenty": "*",
         "wpackagist-plugin/akismet": "*",
         "wpackagist-plugin/what-the-file": "*",
-        "wpackagist-plugin/simply-show-hooks": "*"
+        "wpackagist-plugin/simply-show-hooks": "*",
+        "wpackagist-plugin/advanced-custom-fields": "^5.8",
+        "wpackagist-plugin/advanced-custom-fields-font-awesome": "^3.1"
     },
     "extra" : {
         "wordpress-install-dir": "wp",
