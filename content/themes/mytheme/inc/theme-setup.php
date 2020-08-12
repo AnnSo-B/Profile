@@ -25,4 +25,10 @@ if (!function_exists('mytheme_setup')) {
   };
 };
 
+// add custom function to hook
+add_action(
+  // https://developer.wordpress.org/reference/hooks/after_setup_theme/
+  'after_setup_theme',
+  'mytheme_setup'
+
 ?>
