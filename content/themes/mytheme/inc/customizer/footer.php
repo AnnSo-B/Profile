@@ -1,7 +1,7 @@
 <?php
 
 // create a function that we'll be called in customizer.php
-if(!function_exists('customize_footer')) {
+if(!function_exists('customized_footer')) {
   function customized_footer($wp_customize) {
 
     // then we create setting / control couple for email address
