@@ -9,4 +9,7 @@
   // customizer
   require 'inc/customizer.php';
 
+  // cf7
+  require 'inc/cf7-custom.php';
+
 ?>

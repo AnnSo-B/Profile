@@ -39,6 +39,6 @@
 <!-- and it's displayed this way thanks to the shortcode -->
 <div class="contact-form">
   <?php
-    echo do_shortcode( '[contact-form-7 id="47" title="Contact form 1"]' );
+    echo do_shortcode( '[contact-form-7 id="47" title="Contact form 1" your-email="Email@par-défaut.shortcode"]' );
   ?>
 </div>
