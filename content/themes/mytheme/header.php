@@ -12,6 +12,9 @@
   <div class="wrapper">
     <header
       id="header"
+      <!-- https://codex.wordpress.org/Conditional_Tags
+        use the background image only in front-page
+      -->
       <?php if(is_front_page()) : ?>
       class="header"
         <?php if (the_post_thumbnail_url() !== '') : ?>
