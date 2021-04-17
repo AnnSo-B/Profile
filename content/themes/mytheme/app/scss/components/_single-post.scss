@@ -1,0 +1,17 @@
+.post--single-post {
+  padding-top: $header_menu-on-mobile;
+
+  @media screen AND (min-width: $breakpoint-medium) {
+    padding-top: $header_menu;
+    // height: calc(100vh - footer);
+    height: calc(100vh - 290px);
+  }
+
+  @media screen AND (min-width: $breakpoint-large) {
+    // height: calc(100vh - footer);
+    height: calc(100vh - 350px);
+  }
+
+  @media screen AND (min-width: $breakpoint-xl) {
+  }
+}
