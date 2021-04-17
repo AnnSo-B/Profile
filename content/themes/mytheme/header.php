@@ -10,6 +10,9 @@
   <?php get_template_part('template-parts/header/menu'); ?>
 
   <div class="wrapper">
+    <!-- https://codex.wordpress.org/Conditional_Tags
+      use the background image only in front-page
+    -->
     <header
       id="header"
       <?php if(is_front_page()) : ?>
