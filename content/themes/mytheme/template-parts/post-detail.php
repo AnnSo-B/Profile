@@ -1,5 +1,5 @@
 <article
-  class="post post--single"
+  class="post post--single-post"
   <?php if (the_post_thumbnail_url() !== ''); ?>
     style="background-image: url('<?php the_post_thumbnail_url(); ?>');"
   <?php ?>
