@@ -11,6 +11,9 @@
   // https://developer.mozilla.org/fr/docs/Web/CSS/background-repeat
   background-repeat: no-repeat;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
 
   @media screen AND (min-width: $breakpoint-large) {
@@ -32,6 +35,10 @@
 
   p {
     line-height: 1.2em;
+  }
+
+  &__link {
+    margin-top: 2em;
   }
 
   &::after {
