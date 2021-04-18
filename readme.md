@@ -17,3 +17,6 @@ Plugins :
 - Advanced Custom Fields
 - Advanced Custom Fields - Font Awesome
 Customizer
+Custom plugins :
+- admin plugin permettant d'ajouter la colonne "noms auteurs" au tableau de bord pour les pages
+- redirect to plugin permettant de rediriger un article vers un autre article (par exemple un article sur le même thème mais plus récent)
