@@ -20,3 +20,5 @@ Customizer
 Custom plugins :
 - admin plugin permettant d'ajouter la colonne "noms auteurs" au tableau de bord pour les pages
 - redirect to plugin permettant de rediriger un article vers un autre article (par exemple un article sur le même thème mais plus récent)
+Custom Post Type : 
+- projets catégorisable grâce aux custom taxonomies Clients (X, Y) et Technologies (React, PHP...)
