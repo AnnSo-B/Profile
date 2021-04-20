@@ -70,6 +70,35 @@ class Projects {
     // https://developer.wordpress.org/reference/functions/register_post_type/
     register_post_type('project', $args);
   }
+
+  public function class_activate ()
+  {
+    // on active notre custop post type
+    $this->register_cpt(); 
+
+    // on réinitialise les permaliens pour activer les routes du plugin
+    // https://developer.wordpress.org/reference/functions/flush_rewrite_rules/
+    flush_rewrite_rules();
+  }
+
+  public function class_deactivate ()
+  {
+    // on réinitialise les permaliens pour desactiver les routes du plugin
+    // https://developer.wordpress.org/reference/functions/flush_rewrite_rules/
+    flush_rewrite_rules();
+  }
 };
 
+// instanciation du plugin
 $projects = new Projects();
+
+// A EXECUTER HORS DU PLUGIN
+// A l'activation du plugin
+register_activation_hook(
+  __FILE__, // notre fichier courant
+  $projects, // l'instanciation de notre classe
+  'class_activate' // la méthode que l'on souhaite exécuter 
+);
+
+// A la desactivation du plugin
+register_deactivation_hook(__FILE__, $projects, 'class_deactivate');
