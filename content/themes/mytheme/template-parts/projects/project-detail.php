@@ -1,3 +1,9 @@
+<?php
+  $redirectTo = wp_get_referer()
+    ? wp_get_referer()
+    : get_home_url();
+?>
+
 <article
   class="post post--single-project"
 >
@@ -5,7 +11,6 @@
   <img src="<?php the_post_thumbnail_url() ?>" />
   <?php the_content(); ?>
   <a class="post__link" href="<?php 
-    // prefer https://developer.wordpress.org/reference/functions/get_home_url/ instead of home_url
-    echo get_home_url(); 
-  ?>">Retour à la page d'accueil</a>
+    echo $redirectTo; 
+  ?>">Retour à la page précédente</a>
 </article>

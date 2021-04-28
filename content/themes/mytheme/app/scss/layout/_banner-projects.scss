@@ -1,0 +1,19 @@
+.banner-projects {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -24px;
+  text-align: center;
+
+  @media screen AND (min-width: $breakpoint-medium) {
+    margin-top: -40px;
+  }
+
+  @media screen AND (min-width: $breakpoint-large) {
+  }
+
+  @media screen AND (min-width: $breakpoint-xl) {
+  }
+}
